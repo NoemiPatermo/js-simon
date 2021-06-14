@@ -50,7 +50,7 @@ console.log(listaNum);
     }
         //quanti e quali  dei numeri da indovinare sono stati individuati
      document.getElementById("output").innerText = "I numeri da te inseriti sono: " + listaUser  + "\n I numeri indovinati sono:" + finalList + " \n Il tuo punteggio è " + score;
- }, 3000)
+ }, 3000);
 
  
 
