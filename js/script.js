@@ -21,13 +21,36 @@ function getRandomNumber(min, max){
 }
 while (listaNum.length < 5){
     var randomNum = getRandomNumber(1, 100);
-    if (!listaNum.includes(randomNum)) {
+    if (!listaNum.includes(randomNum)) {  // se il numero random non è nell'array del pc, pushalo
         listaNum.push(randomNum);
     }
 }
 
-alert(" Ecco i tuoi 5 numeri casuali  :  " +   listaNum);
-
+alert(" Ecco i tuoi 5 numeri casuali, memorizzali  :  " +   listaNum);
+console.log(listaNum);
  // PARTE TIMER DI 30 SECONDI. DOPO I QUALI, L'UTENTE DEVE INSERIRE UNO ALLA VOLTA, 
  // I NUMERI CHE HA VISTO PRIMA, TRAMITE IL PROMPT
+
+ var listaUser = [];
+ var finalList = [];
+ var score = 0;
+ console.log(finalList);
+
+ setTimeout(function() {
+   
+    while(listaUser.length < 5 ) {
+        var userNumb = parseInt(prompt('Inserisci un numero!'));
+        listaUser.push(userNumb)    //inserisci il numero dell'utente nel suo array
+    
+    
+        if(listaNum.includes(userNumb)){ //se il numero utente è nell'array del pc 
+            finalList.push(userNumb);       // allora pushalo nell'array finale
+            score += 1;
+        }
+    }
+        //quanti e quali  dei numeri da indovinare sono stati individuati
+     document.getElementById("output").innerText = "I numeri da te inseriti sono: " + listaUser  + "\n I numeri indovinati sono:" + finalList + " \n Il tuo punteggio è " + score;
+ }, 3000)
+
+ 
 
