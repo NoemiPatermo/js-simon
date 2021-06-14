@@ -26,7 +26,7 @@ while (listaNum.length < 5){
     }
 }
 
-alert("Numeri casuali (da 1 a 5) :  " +   listaNum);
+alert(" Ecco i tuoi 5 numeri casuali  :  " +   listaNum);
 
  // PARTE TIMER DI 30 SECONDI. DOPO I QUALI, L'UTENTE DEVE INSERIRE UNO ALLA VOLTA, 
  // I NUMERI CHE HA VISTO PRIMA, TRAMITE IL PROMPT
